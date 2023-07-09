@@ -1,0 +1,23 @@
+<meta charset="UTF-8">
+<script>
+    //Problema: Balanço financeiro
+    // Faça um script que peça para o usuário informar as despesas relacionadas com:
+    // - Conta de água
+    // - Conta de energia elétrica
+    // - Conta de telefone
+    // - Supermercado
+    // Também peça para o usuário informar o valor que recebe de remuneração mensal (salário), proveniente da sua atuação profissional.
+    // Verifique se o usuário ganha mais do que recebe e apresente em tela, indicando quanto que sobrou após o pagamento das contas ou quanto que faltou para poder pagar todas as contas previstas.
+
+    //Entrada
+    const agua = Number(prompt('Informe as despesas da conta de água:').trim().replace(',','.'));
+    const energy = Number(prompt('Informe as despesas da conta de energia elétrica:').trim().replace(',','.'));
+    const telefone = Number(prompt('Informe as despesas da conta de telefone:').trim().replace(',','.'));
+    const mercado = Number(prompt('Informe as despesas da conta do supermercado:').trim().replace(',','.'));
+    const salario = Number(prompt('Informe quanto ganha de salário do trabalho:').trim().replace(',','.'));
+    //Processamento
+    let totalPay = agua + energy + telefone + mercado;
+    (salario>totalPay)? alert(`Vai lhe sobrar R$${salario-totalPay} para outras despesas.`).replace('.',',') :(salario<totalPay)? alert(`Ainda faltam R$${totalPay-salario} para pagar as despesas.`).replace('.',',') : alert('Valores inválidos.');
+    //Saída
+    
+</script>
